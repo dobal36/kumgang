@@ -1,0 +1,414 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.head {
+  height: 135.3px;
+  text-align: center;
+  background-color: var(--head--bg-color);
+  color: var(--head--text-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.top {
+  min-width: 1300px;
+  margin: 0 10%;
+}
+
+.logo {
+  height: 60px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.navigation {
+  margin: 0 10%;
+  margin-top: 15px;
+  min-width: 1300px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigationList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigationMenu {
+  width: 259.6px;
+  text-align: center;
+}
+
+.navigationMenu.active {
+  box-shadow: 0 -5px 0 0 var(--active-shadow-color) inset;
+}
+
+.navigationMenu:hover {
+  height: 50px;
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+  cursor: pointer;
+}
+
+.pcMain {
+  background-color: var(--main-bg-color);
+  width: auto;
+  position: relative;
+  top: 135.5px;
+  padding: 50px 0;
+}
+
+.contentMain {
+  min-width: 1300px;
+  margin: 0 10%;
+}
+
+.mainContent {
+  width: 800px;
+  background-color: var(--content-bg-color);
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.topContent {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #2259b9;
+}
+
+.topContent h1 {
+  font-weight: 500;
+}
+
+.mountain {
+  width: 740px;
+  border-radius: 10px;
+}
+
+.subContent h2 {
+  margin: 20px 0;
+  color: #112d4e;
+}
+
+.subContent p {
+  margin: 20px 30px;
+  font-size: 18px;
+}
+
+.history {
+  text-align: center;
+}
+
+.history img {
+  width: 740px;
+}
+
+.pcFoot {
+  background-color: var(--foot-bg-color);
+  position: relative;
+  top: 135.5px;
+}
+
+.footContent {
+  min-width: 1300px;
+  margin: 0 10%;
+}
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+  padding: 35px 0;
+  color: white;
+}
+
+.slider {
+  position: relative;
+  width: 640px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slide {
+  width: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slide img {
+  width: 640px;
+  height: auto;
+  height: 360.5px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+.darkButton {
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.darkButton:hover {
+  background-color: #bbb;
+}
+
+:root {
+  --head--bg-color: #e3fdfd;
+  --head--text-color: black;
+  --hover-bg-color: #71c9ce;
+  --hover-text-color: white;
+  --active-shadow-color: #71c9ce;
+
+  --main-bg-color: #cbf1f5;
+  --content-bg-color: white;
+
+  --foot-bg-color: #71c9ce;
+}
+
+[data-theme="dark"] {
+  --head--bg-color: #3c3c3c;
+  --head--text-color: white;
+  --hover-bg-color: #1f1f1f;
+  --hover-text-color: white;
+  --active-shadow-color: #1f1f1f;
+
+  --main-bg-color: #303134;
+  --content-bg-color: #bbbaba;
+
+  --foot-bg-color: #1f1f1f;
+}
+
+.mobileHome {
+  display: none;
+}
+
+.photo {
+  text-align: center;
+  margin: -20px;
+}
+
+.upButton {
+  position: fixed;
+  width: 50px;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media screen and (max-width: 944px) {
+  .head {
+    display: none;
+  }
+
+  .mobileHome {
+    display: block;
+    background-color: black;
+  }
+
+  .headerHome {
+    width: auto;
+    height: 52.484px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo2 {
+    border-radius: 30px;
+    width: 100px;
+    margin: 10px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    opacity: 0.9;
+    border: none;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .btn:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .phone {
+    margin: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .phone.open {
+    max-height: 500px;
+  }
+
+  .phoneList {
+    background-color: white;
+    margin-bottom: 10px;
+  }
+
+  .phoneMenu {
+    height: 50px;
+    line-height: 30px;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .phoneMenu:hover {
+    background-color: aliceblue;
+    font-size: 1.5em;
+  }
+
+  .phoneMenu {
+    width: 100%;
+    height: auto;
+  }
+
+  .darkButton {
+    top: 8px;
+    right: 70px;
+  }
+
+  .pcMain {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    padding: 50px 0;
+  }
+
+  .contentMain {
+    min-width: 0px;
+    margin: 0;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin: 0;
+  }
+
+  .mountain {
+    width: 100%;
+  }
+
+  .subContent h2 {
+    font-size: 5.5vw;
+  }
+
+  .subContent p {
+    margin: 20px 30px;
+    font-size: 3vw;
+  }
+
+  .history img {
+    width: 100%;
+  }
+
+  .pcFoot {
+    position: relative;
+    top: 0;
+  }
+
+  .footContent {
+    min-width: 0px;
+    margin: 0 5%;
+  }
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .slider {
+    position: relative;
+    width: 90%;
+    margin: 20px 30px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    height: 360.5px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .leftArrow {
+    left: 10px;
+  }
+
+  .rightArrow {
+    right: 10px;
+  }
+}
